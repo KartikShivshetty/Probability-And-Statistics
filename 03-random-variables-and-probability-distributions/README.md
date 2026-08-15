@@ -50,7 +50,7 @@ Represents the average expected outcome of a random variable.
 ### Variance
 
 $$
-\operatorname{Var}(X)=E(X^2)-[E(X)]^2
+\mathrm{Var}(X)=E(X^2)-[E(X)]^2
 $$
 
 Measures spread or variability of a distribution.
@@ -58,7 +58,7 @@ Measures spread or variability of a distribution.
 ### Standard Deviation
 
 $$
-\sigma = \sqrt{\operatorname{Var}(X)}
+\sigma = \sqrt{\mathrm{Var}(X)}
 $$
 
 Square root of variance indicating dispersion.
@@ -90,7 +90,7 @@ Continuous probability density function.
 ### Covariance
 
 $$
-\operatorname{Cov}(X,Y)=E(XY)-E(X)E(Y)
+\mathrm{Cov}(X,Y)=E(XY)-E(X)E(Y)
 $$
 
 Measures the relationship between two variables.

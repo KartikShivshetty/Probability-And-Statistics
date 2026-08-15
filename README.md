@@ -14,6 +14,13 @@ This repository reorganizes the original visual portfolio into a readable academ
 - **Course:** Probability and Statistics
 - **Track:** Embedded + AI + Robotics
 
+## Quick Navigation
+
+- [Chapters](#repository-contents)
+- [Mini Project](#mini-project)
+- [Laboratory](#laboratory)
+- [Original Visual Portfolio](#original-visual-portfolio)
+
 ## Repository Contents
 
 | Section | Description |

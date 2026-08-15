@@ -110,7 +110,7 @@ $$
 ### Correlation Coefficient
 
 $$
- r=\frac{\operatorname{Cov}(X,Y)}{\sigma_X\sigma_Y}
+ r=\frac{\mathrm{Cov}(X,Y)}{\sigma_X\sigma_Y}
 $$
 
 ### Linear Regression
