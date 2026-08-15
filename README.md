@@ -67,32 +67,6 @@ The original interactive portfolio is preserved under [`web/`](./web/). It remai
 
 The original portfolio contains external Google Drive notebook links for laboratory work and a Google Docs link for the mini-project report. Those links are preserved in the corresponding documentation instead of being replaced with fabricated local files.
 
-## Repository Organization
-
-```text
-probability-and-statistics/
-├── README.md
-├── LICENSE
-├── .gitignore
-├── 01-description-of-data/
-│   └── README.md
-├── 02-probability/
-│   └── README.md
-├── 03-random-variables-and-probability-distributions/
-│   └── README.md
-├── 04-statistical-inference/
-│   └── README.md
-├── mini-project/
-│   └── README.md
-├── laboratory/
-│   ├── README.md
-│   ├── 01-python-basics-and-control-structures.md
-│   ├── 02-statistical-analysis-e-commerce-dataset.md
-│   ├── 03-probability-distribution-binomial-analysis.md
-│   └── 04-python-data-structures-tuple-operations.md
-└── web/
-    └── index.html
-```
 
 ## Notes on Source Fidelity
 
