@@ -1,0 +1,3220 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>Kartik Portfolio</title>
+<link rel='preconnect' href='https://fonts.googleapis.com'>
+<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+<link href='https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap' rel='stylesheet'>
+<style>
+:root{--bg:#020305;--line:#1a202a;--text:#e9edf6;--muted:#98a3b8;--accent:#f1eb57}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'IBM Plex Sans',sans-serif;background:radial-gradient(circle at 15% 20%, rgba(255,255,255,0.02) 0 2px, transparent 2px 100%),radial-gradient(circle at 80% 70%, rgba(255,255,255,0.02) 0 2px, transparent 2px 100%),var(--bg);background-size:34px 34px,34px 34px,auto;color:var(--text)}
+.app{width:min(1920px,98vw);margin:14px auto;border:1px solid var(--line);min-height:calc(100vh - 28px);display:grid;grid-template-rows:auto 1fr}
+.topbar{border-bottom:1px solid var(--line);padding:12px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.brand-btn{font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#0b0c0f;background:var(--accent);padding:9px 14px;letter-spacing:.08em;text-transform:uppercase;margin-right:6px;border:1px solid var(--accent);cursor:pointer}
+.tabs{display:flex;gap:10px;flex-wrap:wrap}
+.tab-btn{border:1px solid var(--line);background:#070b12;color:#cfd8ec;padding:9px 12px;font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.07em;text-transform:uppercase;cursor:pointer}
+.tab-btn:hover{border-color:#2a3345;color:#fff}
+.tab-btn.active{background:var(--accent);color:#111522;border-color:var(--accent);font-weight:700}
+.viewer-wrap{min-height:calc(100vh - 94px)}
+.viewer{width:100%;height:100%;min-height:calc(100vh - 94px);border:0;display:block;background:#000}
+@media(max-width:780px){.brand-btn{width:100%;text-align:center;margin-right:0}.tabs{width:100%}.tab-btn{flex:1 1 calc(50% - 10px)}}
+</style>
+</head>
+<body>
+<div class='app'>
+  <header class='topbar'>
+    <button id='home-btn' class='brand-btn' type='button'>Portfolio</button>
+    <div class='tabs'>
+      <button class='tab-btn' data-page='introduction'>Introduction</button>
+      <button class='tab-btn' data-page='chapter1'>Chapter 1</button>
+      <button class='tab-btn' data-page='chapter2'>Chapter 2</button>
+      <button class='tab-btn' data-page='chapter3'>Chapter 3</button>
+      <button class='tab-btn' data-page='chapter4'>Chapter 4</button>
+      <button class='tab-btn' data-page='mini-project'>Mini Project</button>
+      <button class='tab-btn' data-page='lab-work'>Lab Work</button>
+    </div>
+  </header>
+  <main class='viewer-wrap'>
+    <iframe id='viewer' class='viewer' title='Portfolio Section'></iframe>
+  </main>
+</div>
+
+<template id='page-introduction'>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kartik Portfolio - Tab 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+    --bg:#020305;
+    --grid:#11141a;
+    --line:#1a202a;
+    --text:#e9edf6;
+    --muted:#98a3b8;
+    --accent:#f1eb57;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    background:
+    radial-gradient(circle at 15% 20%, rgba(255,255,255,0.02) 0 2px, transparent 2px 100%),
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.02) 0 2px, transparent 2px 100%),
+    var(--bg);
+    background-size: 34px 34px, 34px 34px, auto;
+    color:var(--text);
+    font-family:'IBM Plex Sans',sans-serif;
+    min-height:100vh;
+    cursor:none;
+}
+.wrap{
+    width:min(1860px, 97vw);
+    margin:20px auto;
+    border:1px solid var(--line);
+    min-height:calc(100vh - 40px);
+    position:relative;
+}
+.wrap::before,
+.wrap::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    border-top:1px solid #0d1016;
+}
+.wrap::before{top:58px}
+.wrap::after{bottom:44px}
+
+.topbar{
+    height:58px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 26px;
+    border-bottom:1px solid var(--line);
+}
+.brand{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    font-weight:700;
+    color:#0b0c0f;
+    background:var(--accent);
+    padding:9px 14px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+}
+.nav{
+    display:flex;
+    gap:42px;
+    list-style:none;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:#6f7788;
+}
+.nav li.active{color:#d4d9e5}
+.status{
+    text-align:right;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:#8d96a8;
+    line-height:1.5;
+}
+.status b{color:var(--accent)}
+
+.main{
+    display:grid;
+    grid-template-columns: 1.48fr 0.92fr;
+    min-height:calc(100vh - 144px);
+}
+.left{
+    border-right:1px solid var(--line);
+    padding:26px;
+}
+.hero{
+    border:1px solid var(--line);
+    min-height:100%;
+    background:linear-gradient(160deg,#d7d9df 0%, #caced6 35%, #b5b9c2 100%);
+    display:grid;
+    grid-template-rows:auto 1fr auto;
+}
+.hero-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    padding:26px 26px 0;
+}
+.kicker{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.15em;
+    text-transform:uppercase;
+    color:#2e3440;
+}
+.score{
+    width:66px;
+    height:66px;
+    border-radius:50%;
+    background:var(--accent);
+    color:#101219;
+    font-family:'Space Mono',monospace;
+    display:grid;
+    place-items:center;
+    text-align:center;
+    font-weight:700;
+    font-size:12px;
+    line-height:1.1;
+}
+.hero-body{
+    padding:22px 30px;
+    color:#1b2230;
+}
+.hero-body h1{
+    font-size:clamp(2rem,4vw,3.35rem);
+    line-height:1.04;
+    margin-bottom:12px;
+    letter-spacing:-0.02em;
+}
+.hero-body h2{
+    font-size:1.18rem;
+    margin-bottom:18px;
+    color:#2d3445;
+    font-weight:600;
+}
+.meta{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(180px,1fr));
+    gap:10px;
+    margin-bottom:18px;
+}
+.meta div{
+    background:rgba(255,255,255,0.34);
+    border:1px solid rgba(40,48,64,0.18);
+    padding:10px 12px;
+    font-size:0.94rem;
+}
+.meta span{
+    display:block;
+    font-family:'Space Mono',monospace;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.09em;
+    color:#4a5265;
+    margin-bottom:4px;
+}
+.about{
+    color:#242b3a;
+    line-height:1.75;
+    font-size:0.95rem;
+}
+.hero-foot{
+    border-top:1px solid rgba(35,40,51,0.25);
+    padding:12px 22px;
+    display:flex;
+    justify-content:space-between;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:#2c3241;
+}
+
+.right{
+    padding:26px 20px;
+    display:grid;
+    grid-template-rows:auto auto 1fr auto;
+    gap:16px;
+}
+.panel{
+    border:1px solid var(--line);
+    background:#06080d;
+}
+.photo img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    display:block;
+    filter:grayscale(100%) contrast(108%);
+}
+.panel-footer{
+    padding:12px 14px;
+    border-top:1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:#d7deed;
+}
+.course,
+.skills{
+    padding:16px;
+}
+.label{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    color:var(--accent);
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    margin-bottom:8px;
+}
+.course p{color:#cad2e4;line-height:1.7;font-size:0.95rem}
+.skills ul{list-style:none;display:grid;gap:7px}
+.skills li{
+    color:#c8d1e6;
+    font-size:0.92rem;
+    padding-left:13px;
+    position:relative;
+    line-height:1.5;
+}
+.skills li::before{
+    content:"";
+    width:4px;
+    height:4px;
+    border-radius:50%;
+    background:var(--accent);
+    position:absolute;
+    left:0;
+    top:10px;
+}
+.bottombar{
+    height:44px;
+    border-top:1px solid var(--line);
+    padding:0 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.09em;
+    text-transform:uppercase;
+    color:#8691a6;
+}
+
+.cursor-dot,
+.cursor-ring{
+    position:fixed;
+    top:0;
+    left:0;
+    pointer-events:none;
+    z-index:9999;
+    transform:translate(-50%,-50%);
+}
+
+.cursor-dot{
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:var(--accent);
+}
+
+.cursor-ring{
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    border:1px solid rgba(241,235,87,0.7);
+}
+@media(max-width:1100px){
+    .main{grid-template-columns:1fr}
+    .left{border-right:none;border-bottom:1px solid var(--line)}
+    .nav{display:none}
+}
+@media(max-width:700px){
+    body{cursor:auto}
+    .topbar{padding:0 14px}
+    .left,.right{padding:14px}
+    .hero-head,.hero-body{padding-left:16px;padding-right:16px}
+    .meta{grid-template-columns:1fr}
+    .status{font-size:10px}
+    .cursor-dot,.cursor-ring{display:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <header class="topbar">
+        <div class="brand">Prob & Stats</div>
+        <ul class="nav">
+            <li class="active">Introduction</li>
+        </ul>
+        <div class="status">
+            LOC: KLE TECH, INDIA
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="left">
+            <article class="hero">
+                <div class="hero-head">
+                    <div class="kicker">Probability & Statistics</div>
+                    <div class="score">Intro<br></div>
+                </div>
+
+                <div class="hero-body">
+                    <h1>Kartik Shivshetty</h1>
+                    <h2>Computer Science and Engineering</h2>
+
+                    <div class="meta">
+                        <div><span>Roll Number</span>632</div>
+                        <div><span>USN</span>01FE25BCS387</div>
+                        <div><span>University</span>KLE Technological University</div>
+                        <div><span>Track</span>Embedded + AI + Robotics</div>
+                    </div>
+
+                    <p class="about">
+                        I am Kartik Shivshetty, a Computer Science and Engineering student with a strong interest in embedded systems, AI applications, robotics, and software development. I enjoy building practical projects using Arduino and ESP32, particularly in automation, sensor integration, and voice-controlled systems. Along with hardware projects, I also explore AI assistants and creative software ideas that combine functionality with innovation. I am passionate about hands-on learning, problem solving, and continuously improving my technical skills through real-world projects.
+                    </p>
+                </div>
+
+                <div class="hero-foot">
+                    <span>PROJECT_001</span>
+                    <span>TECH: HTML / CSS</span>
+                    <span>YEAR: 2026</span>
+                </div>
+            </article>
+        </section>
+
+        <aside class="right">
+            <article class="panel photo">
+                <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=1000&q=80" alt="Probability and statistics formulas on a board">
+                <div class="panel-footer">
+                    <span>Imagination</span>
+                    <span>Mathematics</span>
+                </div>
+            </article>
+
+            <article class="panel course">
+                <div class="label">Course Name</div>
+                <p>Probability and Statistics</p>
+            </article>
+
+            <article class="panel skills">
+                <div class="label">Technical Skills</div>
+                <ul>
+                    <li>C and Python Programming</li>
+                    <li>Arduino and ESP32 Development</li>
+                    <li>Embedded Systems and IoT</li>
+                    <li>Robotics Basics</li>
+                    <li>AI Assistant Development</li>
+                    <li>Sensor Integration</li>
+                    <li>Automation Systems</li>
+                    <li>Problem Solving and Debugging</li>
+                    <li>Team Collaboration</li>
+                    <li>Technical Documentation</li>
+                </ul>
+            </article>
+        </aside>
+    </main>
+
+    <footer class="bottombar">
+        <span>PORTFOLIO HOME</span>
+        <span>KARTIK SHIVSHETTY</span>
+        <span>2026</span>
+    </footer>
+</div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<script>
+const dot = document.getElementById("cursorDot");
+const ring = document.getElementById("cursorRing");
+const hoverTargets = document.querySelectorAll("a, button, .panel, .brand, .nav li");
+
+let mouseX = window.innerWidth / 2;
+let mouseY = window.innerHeight / 2;
+let ringX = mouseX;
+let ringY = mouseY;
+
+window.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    dot.style.left = mouseX + "px";
+    dot.style.top = mouseY + "px";
+});
+
+hoverTargets.forEach((el) => {
+    el.addEventListener("mouseenter", () => {
+        ring.style.width = "36px";
+        ring.style.height = "36px";
+        ring.style.borderColor = "rgba(241,235,87,1)";
+    });
+    el.addEventListener("mouseleave", () => {
+        ring.style.width = "28px";
+        ring.style.height = "28px";
+        ring.style.borderColor = "rgba(241,235,87,0.7)";
+    });
+});
+
+function animateRing() {
+    ringX += (mouseX - ringX) * 0.16;
+    ringY += (mouseY - ringY) * 0.16;
+    ring.style.left = ringX + "px";
+    ring.style.top = ringY + "px";
+    requestAnimationFrame(animateRing);
+}
+
+animateRing();
+</script>
+</body>
+</html>
+
+</template>
+
+<template id='page-chapter1'>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chapter 1 - Description of Data</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#020305;
+    --line:#1a202a;
+    --text:#e9edf6;
+    --muted:#98a3b8;
+    --accent:#f1eb57;
+    --panel:#06080d;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'IBM Plex Sans',sans-serif;
+    background:
+    radial-gradient(circle at 15% 20%, rgba(255,255,255,0.02) 0 2px, transparent 2px 100%),
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.02) 0 2px, transparent 2px 100%),
+    var(--bg);
+    background-size:34px 34px,34px 34px,auto;
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+.wrap{
+    width:min(1860px,97vw);
+    margin:20px auto;
+    border:1px solid var(--line);
+    position:relative;
+}
+
+.wrap::before,
+.wrap::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    border-top:1px solid #0d1016;
+}
+
+.wrap::before{top:58px}
+.wrap::after{bottom:44px}
+
+.topbar{
+    height:58px;
+    border-bottom:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 26px;
+}
+
+.brand{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    font-weight:700;
+    color:#0b0c0f;
+    background:var(--accent);
+    padding:9px 14px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+}
+
+.label,
+.status{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--muted);
+}
+
+.main{
+    padding:22px;
+}
+
+.container{
+    width:100%;
+    max-width:1280px;
+    margin:auto;
+}
+
+.header{
+    border:1px solid var(--line);
+    background:linear-gradient(160deg,#d7d9df 0%,#caced6 35%,#b5b9c2 100%);
+    color:#1e2534;
+    padding:30px;
+    margin-bottom:22px;
+}
+
+.tag{
+    display:inline-block;
+    padding:8px 14px;
+    background:var(--accent);
+    color:#121622;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    margin-bottom:16px;
+}
+
+.header h1{
+    font-size:clamp(2rem,4vw,3.1rem);
+    margin-bottom:12px;
+}
+
+.header p{
+    color:#2e3648;
+    line-height:1.8;
+}
+
+.section-title{
+    font-family:'Space Mono',monospace;
+    font-size:22px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin:30px 0 16px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:14px;
+}
+
+.card{
+    background:var(--panel);
+    padding:20px;
+    border:1px solid var(--line);
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:var(--accent);
+    font-size:20px;
+}
+
+.card p{
+    color:#cbd5e1;
+    line-height:1.75;
+}
+
+.concepts{
+    margin-top:24px;
+}
+
+.concept-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:14px;
+}
+
+.concept{
+    background:var(--panel);
+    padding:20px;
+    border:1px solid var(--line);
+}
+
+.concept h4{
+    margin-bottom:10px;
+    font-size:20px;
+    color:#dce4f6;
+}
+
+.concept p{
+    color:#b9c6e0;
+    line-height:1.7;
+}
+
+.visual-section{
+    margin-top:24px;
+}
+
+.chart-box{
+    margin:auto;
+    width:100%;
+    max-width:900px;
+    padding:24px;
+    background:var(--panel);
+    border:1px solid var(--line);
+}
+
+.chart-box p{
+    color:#cbd5e1;
+}
+
+.chart{
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    gap:24px;
+    height:300px;
+    margin-top:30px;
+}
+
+.bar{
+    width:66px;
+    border-radius:8px 8px 0 0;
+    position:relative;
+    animation:grow 1.6s ease;
+}
+
+.bar1{
+    height:120px;
+    background:#6f88b8;
+}
+
+.bar2{
+    height:220px;
+    background:#88a0cf;
+}
+
+.bar3{
+    height:170px;
+    background:#7d94c2;
+}
+
+.bar4{
+    height:260px;
+    background:var(--accent);
+}
+
+.bar span{
+    position:absolute;
+    bottom:-35px;
+    left:50%;
+    transform:translateX(-50%);
+    color:#d8e1f2;
+    font-family:'Space Mono',monospace;
+}
+
+@keyframes grow{
+    from{
+        height:0;
+    }
+}
+
+.formula{
+    margin-top:24px;
+    padding:24px;
+    border:1px solid var(--line);
+    background:var(--panel);
+}
+
+.formula h2{
+    text-align:left;
+    color:var(--accent);
+    margin-bottom:16px;
+    font-family:'Space Mono',monospace;
+    font-size:22px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+}
+
+.formula-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:14px;
+}
+
+.formula-card{
+    background:#090d16;
+    padding:18px;
+    border:1px solid var(--line);
+}
+
+.formula-card h3{
+    margin-bottom:12px;
+    color:#dce4f6;
+    font-size:20px;
+}
+
+.math{
+    font-size:22px;
+    font-weight:600;
+    margin-bottom:12px;
+    color:var(--accent);
+    word-wrap:break-word;
+}
+
+.formula-card p{
+    color:#cbd5e1;
+    line-height:1.65;
+    font-size:15px;
+}
+
+.footer{
+    height:44px;
+    border-top:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:#8691a6;
+}
+
+@media(max-width:768px){
+    .topbar{
+        padding:0 14px;
+    }
+
+    .main{
+        padding:14px;
+    }
+
+    .header{
+        padding:20px;
+    }
+
+    .section-title{
+        font-size:18px;
+    }
+
+    .status{
+        display:none;
+    }
+
+    .chart{
+        gap:16px;
+    }
+
+    .bar{
+        width:52px;
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+    <header class="topbar">
+        <div class="brand">Prob & Stats</div>
+        <div class="label">Chapter 1</div>
+        <div class="status">LOC: KLE TECH, INDIA</div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+
+            <div class="header">
+
+                <div class="tag">
+                    Chapter 1
+                </div>
+
+                <h1>Description of Data</h1>
+
+                <p>
+                    In this chapter, I learned the fundamentals of data analysis
+                    and statistical representation. The chapter introduced
+                    different types of variables, measures of central tendency,
+                    dispersion techniques, histograms, box plots, skewness, and
+                    normal quantile plots. These concepts help in understanding
+                    and interpreting real-world data effectively.
+                </p>
+
+            </div>
+
+            <h2 class="section-title">Learning Outcomes</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Data Understanding</h3>
+                    <p>
+                        Learned different types of data, variables, and scales
+                        of measurement used in statistics.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Central Tendency</h3>
+                    <p>
+                        Understood how mean, median, and mode summarize datasets
+                        efficiently.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Dispersion</h3>
+                    <p>
+                        Explored variance, standard deviation, and coefficient
+                        of variation to measure spread in data.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Data Visualization</h3>
+                    <p>
+                        Learned graphical representation techniques such as
+                        histograms, box plots, and QQ plots.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="concepts">
+
+                <h2 class="section-title">Concepts Covered</h2>
+
+                <div class="concept-grid">
+
+                    <div class="concept">
+                        <h4>Mean</h4>
+                        <p>
+                            The average value of all observations in a dataset.
+                        </p>
+                    </div>
+
+                    <div class="concept">
+                        <h4>Median</h4>
+                        <p>
+                            The middle value when data is arranged in order.
+                        </p>
+                    </div>
+
+                    <div class="concept">
+                        <h4>Mode</h4>
+                        <p>
+                            The most frequently occurring value in the dataset.
+                        </p>
+                    </div>
+
+                    <div class="concept">
+                        <h4>Histogram</h4>
+                        <p>
+                            Graphical representation of frequency distribution.
+                        </p>
+                    </div>
+
+                    <div class="concept">
+                        <h4>Variance</h4>
+                        <p>
+                            Measures how far data points are spread from the mean.
+                        </p>
+                    </div>
+
+                    <div class="concept">
+                        <h4>Box Plot</h4>
+                        <p>
+                            Visualizes distribution, quartiles, and outliers.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="visual-section">
+
+                <h2 class="section-title">Sample Data Visualization</h2>
+
+                <div class="chart-box">
+
+                    <p>
+                        Example representation of statistical data using a bar graph.
+                    </p>
+
+                    <div class="chart">
+
+                        <div class="bar bar1">
+                            <span>A</span>
+                        </div>
+
+                        <div class="bar bar2">
+                            <span>B</span>
+                        </div>
+
+                        <div class="bar bar3">
+                            <span>C</span>
+                        </div>
+
+                        <div class="bar bar4">
+                            <span>D</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="formula">
+
+                <h2>Important Statistical Formulas</h2>
+
+                <div class="formula-grid">
+
+                    <div class="formula-card">
+                        <h3>Mean</h3>
+                        <div class="math">
+                            xÌ„ = (Î£x) / n
+                        </div>
+                        <p>Average value of observations.</p>
+                    </div>
+
+                    <div class="formula-card">
+                        <h3>Median</h3>
+                        <div class="math">
+                            Median = Middle Value
+                        </div>
+                        <p>Central value in ordered data.</p>
+                    </div>
+
+                    <div class="formula-card">
+                        <h3>Mode</h3>
+                        <div class="math">
+                            Mode = Most Frequent Value
+                        </div>
+                        <p>Most repeated observation.</p>
+                    </div>
+
+                    <div class="formula-card">
+                        <h3>Variance</h3>
+                        <div class="math">
+                            ÏƒÂ² = Î£(x - xÌ„)Â² / n
+                        </div>
+                        <p>Measures spread of data.</p>
+                    </div>
+
+                    <div class="formula-card">
+                        <h3>Standard Deviation</h3>
+                        <div class="math">
+                            Ïƒ = âˆš[Î£(x - xÌ„)Â² / n]
+                        </div>
+                        <p>Square root of variance.</p>
+                    </div>
+
+                    <div class="formula-card">
+                        <h3>Coefficient of Variation</h3>
+                        <div class="math">
+                            CV = (Ïƒ / xÌ„) Ã— 100
+                        </div>
+                        <p>Relative variability of data.</p>
+                    </div>
+
+                    <div class="formula-card">
+                        <h3>Range</h3>
+                        <div class="math">
+                            Range = Max âˆ’ Min
+                        </div>
+                        <p>Difference between highest and lowest values.</p>
+                    </div>
+
+                    <div class="formula-card">
+                        <h3>Quartiles</h3>
+                        <div class="math">
+                            Q1, Q2, Q3
+                        </div>
+                        <p>Divide data into four equal parts.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">Chapter 1</footer>
+</div>
+</body>
+</html>
+
+</template>
+
+<template id='page-chapter2'>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chapter 2 - Probability</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#020305;
+    --line:#1a202a;
+    --text:#e9edf6;
+    --muted:#98a3b8;
+    --accent:#f1eb57;
+    --panel:#06080d;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:'IBM Plex Sans',sans-serif;
+    background:
+    radial-gradient(circle at 15% 20%, rgba(255,255,255,0.02) 0 2px, transparent 2px 100%),
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.02) 0 2px, transparent 2px 100%),
+    var(--bg);
+    background-size:34px 34px,34px 34px,auto;
+    color:var(--text);
+    overflow-x:hidden;
+}
+.wrap{
+    width:min(1860px,97vw);
+    margin:20px auto;
+    border:1px solid var(--line);
+    position:relative;
+}
+.wrap::before,.wrap::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    border-top:1px solid #0d1016;
+}
+.wrap::before{top:58px}
+.wrap::after{bottom:44px}
+.topbar{
+    height:58px;
+    border-bottom:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 26px;
+}
+.brand{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    font-weight:700;
+    color:#0b0c0f;
+    background:var(--accent);
+    padding:9px 14px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+}
+.label,.status{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--muted);
+}
+.main{padding:22px}
+.container{width:100%;max-width:1280px;margin:auto}
+.header{
+    border:1px solid var(--line);
+    background:linear-gradient(160deg,#d7d9df 0%,#caced6 35%,#b5b9c2 100%);
+    color:#1e2534;
+    padding:30px;
+    margin-bottom:22px;
+}
+.tag{
+    display:inline-block;
+    padding:8px 14px;
+    background:var(--accent);
+    color:#121622;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    margin-bottom:16px;
+}
+.header h1{
+    font-size:clamp(2rem,4vw,3.1rem);
+    margin-bottom:12px;
+}
+.header p{
+    max-width:900px;
+    color:#2e3648;
+    line-height:1.8;
+}
+.section-title{
+    text-align:left;
+    font-family:'Space Mono',monospace;
+    font-size:22px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin:30px 0 16px;
+}
+.cards,.formula-grid,.app-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:14px;
+}
+.card,.formula-card,.app,.chart-box{
+    background:var(--panel);
+    border:1px solid var(--line);
+}
+.card{
+    padding:20px;
+}
+.card h3{
+    color:var(--accent);
+    margin-bottom:10px;
+    font-size:20px;
+}
+.card p{
+    color:#cbd5e1;
+    line-height:1.75;
+}
+.visual{
+    margin-top:24px;
+}
+.visual-note{
+    color:#cbd5e1;
+    line-height:1.8;
+    margin-bottom:16px;
+}
+.dice-box{
+    display:flex;
+    justify-content:center;
+    margin-top:10px;
+}
+.dice{
+    width:110px;
+    height:110px;
+    border-radius:14px;
+    border:2px solid rgba(241,235,87,0.65);
+    background:linear-gradient(160deg,#0f1a2e,#16253f);
+    box-shadow:0 14px 28px rgba(0,0,0,0.35), inset 0 0 0 1px rgba(255,255,255,0.06);
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+}
+.dice-strip{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    animation:rollDice 2.4s steps(6) infinite;
+}
+.dice-strip span{
+    width:100%;
+    height:92px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:58px;
+    line-height:1;
+    color:var(--accent);
+}
+@keyframes rollDice{
+    from{transform:translateY(0)}
+    to{transform:translateY(-552px)}
+}
+.formula{
+    margin-top:24px;
+    padding:24px;
+    border:1px solid var(--line);
+    background:var(--panel);
+}
+.formula h2{
+    text-align:left;
+    color:var(--accent);
+    margin-bottom:16px;
+    font-family:'Space Mono',monospace;
+    font-size:22px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+}
+.formula-card{
+    padding:18px;
+    text-align:left;
+}
+.formula-card h3{
+    color:#dce4f6;
+    margin-bottom:10px;
+    font-size:20px;
+}
+.math{
+    font-size:20px;
+    font-weight:600;
+    margin-bottom:10px;
+    color:var(--accent);
+    word-wrap:break-word;
+}
+.formula-card p{
+    color:#cbd5e1;
+    line-height:1.65;
+}
+.apps{
+    margin-top:24px;
+}
+.app{
+    padding:20px;
+}
+.app h4{
+    margin-bottom:10px;
+    color:#dce4f6;
+    font-size:20px;
+}
+.app p{
+    color:#cbd5e1;
+    line-height:1.7;
+}
+.footer{
+    height:44px;
+    border-top:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:#8691a6;
+}
+@media(max-width:768px){
+    .topbar{padding:0 14px}
+    .main{padding:14px}
+    .header{padding:20px}
+    .section-title,.formula h2{font-size:18px}
+    .status{display:none}
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+    <header class="topbar">
+        <div class="brand">Prob & Stats</div>
+        <div class="label">Chapter 2</div>
+        <div class="status">LOC: KLE TECH, INDIA</div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+
+            <div class="header">
+                <div class="tag">Chapter 2</div>
+                <h1>Probability</h1>
+                <p>
+                    In this chapter, I learned the fundamentals of probability,
+                    random experiments, events, sample spaces, addition and
+                    multiplication laws of probability, conditional probability,
+                    Bayes theorem, and total probability theorem. Probability
+                    helps in predicting outcomes and making decisions under uncertainty.
+                </p>
+            </div>
+
+            <h2 class="section-title">Learning Outcomes</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Random Experiments</h3>
+                    <p>
+                        Learned concepts of trials, events, exhaustive cases,
+                        and mutually exclusive events.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Probability Laws</h3>
+                    <p>
+                        Understood addition rule, multiplication rule, and
+                        probability calculations for multiple events.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Conditional Probability</h3>
+                    <p>
+                        Learned probability of an event under given conditions
+                        and dependent events.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Bayes Theorem</h3>
+                    <p>
+                        Applied Bayes theorem to update probabilities based
+                        on new information.
+                    </p>
+                </div>
+            </div>
+
+            <div class="visual">
+                <h2 class="section-title">Probability Visualization</h2>
+                <p class="visual-note">
+                    Example of equally likely outcomes in Rolling of a Dice.
+                </p>
+                <div class="dice-box">
+                    <div class="dice">
+                        <div class="dice-strip">
+                            <span>⚀</span>
+                            <span>⚁</span>
+                            <span>⚂</span>
+                            <span>⚃</span>
+                            <span>⚄</span>
+                            <span>⚅</span>
+                            <span>⚀</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="formula">
+                <h2>Important Probability Formulas</h2>
+                <div class="formula-grid">
+                    <div class="formula-card">
+                        <h3>Basic Probability</h3>
+                        <div class="math">P(E) = Favorable Outcomes / Total Outcomes</div>
+                        <p>Probability of occurrence of an event.</p>
+                    </div>
+                    <div class="formula-card">
+                        <h3>Addition Rule</h3>
+                        <div class="math">P(A âˆª B) = P(A) + P(B) âˆ’ P(A âˆ© B)</div>
+                        <p>Used for probability of union of two events.</p>
+                    </div>
+                    <div class="formula-card">
+                        <h3>Multiplication Rule</h3>
+                        <div class="math">P(A âˆ© B) = P(A) Â· P(B|A)</div>
+                        <p>Probability of occurrence of both events.</p>
+                    </div>
+                    <div class="formula-card">
+                        <h3>Conditional Probability</h3>
+                        <div class="math">P(B|A) = P(A âˆ© B) / P(A)</div>
+                        <p>Probability of B when A has already occurred.</p>
+                    </div>
+                    <div class="formula-card">
+                        <h3>Independent Events</h3>
+                        <div class="math">P(A âˆ© B) = P(A) Â· P(B)</div>
+                        <p>Formula for independent events.</p>
+                    </div>
+                    <div class="formula-card">
+                        <h3>Complementary Event</h3>
+                        <div class="math">P(A') = 1 âˆ’ P(A)</div>
+                        <p>Probability that an event does not occur.</p>
+                    </div>
+                    <div class="formula-card">
+                        <h3>Law of Total Probability</h3>
+                        <div class="math">P(A) = Î£ P(A|Bi)P(Bi)</div>
+                        <p>Used when sample space is partitioned.</p>
+                    </div>
+                    <div class="formula-card">
+                        <h3>Bayes Theorem</h3>
+                        <div class="math">P(Ei|A)= P(Ei)P(A|Ei) / Î£[P(Ei)P(A|Ei)]</div>
+                        <p>Updates prior probability using evidence.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="apps">
+                <h2 class="section-title">Applications of Probability</h2>
+                <div class="app-grid">
+                    <div class="app">
+                        <h4>Machine Learning</h4>
+                        <p>Used in Bayesian classification and predictive models.</p>
+                    </div>
+                    <div class="app">
+                        <h4>Weather Forecasting</h4>
+                        <p>Helps predict rainfall and climate conditions.</p>
+                    </div>
+                    <div class="app">
+                        <h4>Games & Simulations</h4>
+                        <p>Probability is widely used in gaming and simulations.</p>
+                    </div>
+                    <div class="app">
+                        <h4>Engineering</h4>
+                        <p>Used in reliability testing and risk analysis.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">Chapter 2</footer>
+</div>
+</body>
+</html>
+
+</template>
+
+<template id='page-chapter3'>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chapter 3 - Random Variables and Probability Distribution</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#020305;
+    --line:#1a202a;
+    --text:#e9edf6;
+    --muted:#98a3b8;
+    --accent:#f1eb57;
+    --panel:#06080d;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:'IBM Plex Sans',sans-serif;
+    background:
+    radial-gradient(circle at 15% 20%, rgba(255,255,255,0.02) 0 2px, transparent 2px 100%),
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.02) 0 2px, transparent 2px 100%),
+    var(--bg);
+    background-size:34px 34px,34px 34px,auto;
+    color:var(--text);
+    overflow-x:hidden;
+}
+.wrap{
+    width:min(1860px,97vw);
+    margin:20px auto;
+    border:1px solid var(--line);
+    position:relative;
+}
+.wrap::before,.wrap::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    border-top:1px solid #0d1016;
+}
+.wrap::before{top:58px}
+.wrap::after{bottom:44px}
+.topbar{
+    height:58px;
+    border-bottom:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 26px;
+}
+.brand{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    font-weight:700;
+    color:#0b0c0f;
+    background:var(--accent);
+    padding:9px 14px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+}
+.label,.status{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--muted);
+}
+.main{
+    padding:22px;
+}
+.container{
+    width:100%;
+    max-width:1280px;
+    margin:auto;
+}
+.header{
+    border:1px solid var(--line);
+    background:linear-gradient(160deg,#d7d9df 0%,#caced6 35%,#b5b9c2 100%);
+    color:#1e2534;
+    padding:30px;
+    margin-bottom:22px;
+}
+.tag{
+    display:inline-block;
+    padding:8px 14px;
+    background:var(--accent);
+    color:#121622;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    margin-bottom:16px;
+}
+.header h1{
+    font-size:clamp(2rem,4vw,3.1rem);
+    margin-bottom:12px;
+}
+.header p{
+    max-width:980px;
+    color:#2e3648;
+    line-height:1.8;
+}
+.section-title{
+    text-align:left;
+    color:var(--accent);
+    margin:30px 0 16px;
+    font-family:'Space Mono',monospace;
+    font-size:22px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+}
+.cards,.concept-grid,.formula-grid,.app-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:14px;
+}
+.card,.concept,.formula-card,.app,.graph-box,.summary{
+    background:var(--panel);
+    border:1px solid var(--line);
+}
+.card{
+    padding:20px;
+}
+.card h3{
+    color:var(--accent);
+    margin-bottom:10px;
+    font-size:20px;
+}
+.card p{
+    color:#cbd5e1;
+    line-height:1.75;
+}
+.concepts{
+    margin-top:24px;
+}
+.concept{
+    padding:20px;
+}
+.concept h4{
+    color:#dce4f6;
+    margin-bottom:10px;
+    font-size:20px;
+}
+.concept p{
+    color:#cbd5e1;
+    line-height:1.75;
+}
+.visual{
+    margin-top:24px;
+}
+.graph-box{
+    padding:24px;
+}
+.graph-note{
+    color:#cbd5e1;
+    line-height:1.9;
+    text-align:left;
+}
+.graph{
+    height:300px;
+    position:relative;
+    margin-top:40px;
+}
+.curve{
+    width:100%;
+    height:220px;
+    border-bottom:2px solid #d9e0ef;
+    position:relative;
+}
+.curve::before{
+    content:'';
+    position:absolute;
+    left:5%;
+    top:10px;
+    width:90%;
+    height:180px;
+    border-radius:50%;
+    border-top:6px solid var(--accent);
+}
+.labels{
+    display:flex;
+    justify-content:space-between;
+    margin-top:15px;
+    color:#cbd5e1;
+    font-family:'Space Mono',monospace;
+}
+.formula{
+    margin-top:24px;
+    padding:24px;
+    border:1px solid var(--line);
+    background:var(--panel);
+}
+.formula h2{
+    text-align:left;
+    color:var(--accent);
+    margin-bottom:16px;
+    font-family:'Space Mono',monospace;
+    font-size:22px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+}
+.formula-card{
+    padding:18px;
+    text-align:left;
+}
+.formula-card h3{
+    color:#dce4f6;
+    margin-bottom:10px;
+    font-size:20px;
+}
+.math{
+    font-size:20px;
+    font-weight:600;
+    margin-bottom:10px;
+    color:var(--accent);
+    word-wrap:break-word;
+}
+.formula-card p{
+    color:#cbd5e1;
+    line-height:1.65;
+}
+.apps{
+    margin-top:24px;
+}
+.app{
+    padding:20px;
+}
+.app h4{
+    color:#dce4f6;
+    margin-bottom:10px;
+    font-size:20px;
+}
+.app p{
+    color:#cbd5e1;
+    line-height:1.75;
+}
+.summary{
+    margin-top:24px;
+    padding:24px;
+    text-align:left;
+}
+.summary h2{
+    color:var(--accent);
+    margin-bottom:16px;
+    font-family:'Space Mono',monospace;
+    font-size:22px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+}
+.summary p{
+    color:#cbd5e1;
+    line-height:1.9;
+}
+.footer{
+    height:44px;
+    border-top:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:#8691a6;
+}
+@media(max-width:768px){
+    .topbar{padding:0 14px}
+    .main{padding:14px}
+    .header{padding:20px}
+    .section-title,.formula h2,.summary h2{font-size:18px}
+    .status{display:none}
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+    <header class="topbar">
+        <div class="brand">Prob & Stats</div>
+        <div class="label">Chapter 3</div>
+        <div class="status">LOC: KLE TECH, INDIA</div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+
+            <div class="header">
+                <div class="tag">Chapter 3</div>
+                <h1>Random Variables & Probability Distribution</h1>
+                <p>
+                    In this chapter, I studied one of the most important areas of
+                    probability and statistics - random variables and probability
+                    distributions. This chapter introduced discrete and continuous
+                    random variables, probability mass functions, probability density
+                    functions, cumulative distribution functions, expectation, variance,
+                    covariance, and important probability distributions such as
+                    Binomial, Poisson, and Normal distributions.
+
+                    These concepts are widely used in machine learning, artificial
+                    intelligence, data science, engineering analysis, simulations,
+                    reliability studies, and predictive modeling.
+                </p>
+            </div>
+
+            <h2 class="section-title">Learning Outcomes</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Random Variables</h3>
+                    <p>
+                        Learned how random variables are used to represent uncertain
+                        numerical outcomes in experiments and real-world applications.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Discrete & Continuous Variables</h3>
+                    <p>
+                        Understood the difference between discrete and continuous
+                        random variables along with their graphical representation.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Probability Distributions</h3>
+                    <p>
+                        Studied Binomial, Poisson, and Normal distributions and
+                        learned how they model different practical situations.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Statistical Parameters</h3>
+                    <p>
+                        Learned computation of mean, variance, covariance, and
+                        expectation of probability distributions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="concepts">
+                <h2 class="section-title">Major Concepts Covered</h2>
+                <div class="concept-grid">
+                    <div class="concept">
+                        <h4>Random Variable</h4>
+                        <p>
+                            A variable whose value depends on outcomes of a random
+                            experiment. It converts outcomes into numerical form.
+                        </p>
+                    </div>
+                    <div class="concept">
+                        <h4>Discrete Random Variable</h4>
+                        <p>
+                            Takes countable values such as number of heads obtained
+                            in tossing coins.
+                        </p>
+                    </div>
+                    <div class="concept">
+                        <h4>Continuous Random Variable</h4>
+                        <p>
+                            Takes infinitely many values within a range such as
+                            temperature or height measurements.
+                        </p>
+                    </div>
+                    <div class="concept">
+                        <h4>Probability Distribution</h4>
+                        <p>
+                            Describes probabilities associated with all possible
+                            values of a random variable.
+                        </p>
+                    </div>
+                    <div class="concept">
+                        <h4>Binomial Distribution</h4>
+                        <p>
+                            Used when experiments have only two outcomes like
+                            success or failure.
+                        </p>
+                    </div>
+                    <div class="concept">
+                        <h4>Poisson Distribution</h4>
+                        <p>
+                            Models rare events occurring within a fixed interval.
+                        </p>
+                    </div>
+                    <div class="concept">
+                        <h4>Normal Distribution</h4>
+                        <p>
+                            Bell-shaped continuous distribution commonly used in
+                            natural and engineering processes.
+                        </p>
+                    </div>
+                    <div class="concept">
+                        <h4>Covariance</h4>
+                        <p>
+                            Measures the relationship between two random variables
+                            and how they vary together.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="visual">
+                <h2 class="section-title">Normal Distribution Curve</h2>
+                <div class="graph-box">
+                    <p class="graph-note">
+                        The Normal Distribution is one of the most important probability
+                        distributions used in statistics, machine learning, signal processing,
+                        and scientific analysis.
+                    </p>
+                    <div class="graph">
+                        <div class="curve"></div>
+                        <div class="labels">
+                            <span>-3Ïƒ</span>
+                            <span>-2Ïƒ</span>
+                            <span>-1Ïƒ</span>
+                            <span>Î¼</span>
+                            <span>+1Ïƒ</span>
+                            <span>+2Ïƒ</span>
+                            <span>+3Ïƒ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="formula">
+                <h2>Important Formulas</h2>
+                <div class="formula-grid">
+                    <div class="formula-card">
+                        <h3>Expected Value</h3>
+                        <div class="math">E(X) = Î£ xP(x)</div>
+                        <p>
+                            Represents the average expected outcome of a random variable.
+                        </p>
+                    </div>
+                    <div class="formula-card">
+                        <h3>Variance</h3>
+                        <div class="math">Var(X)=E(XÂ²)-[E(X)]Â²</div>
+                        <p>
+                            Measures spread or variability of a distribution.
+                        </p>
+                    </div>
+                    <div class="formula-card">
+                        <h3>Standard Deviation</h3>
+                        <div class="math">Ïƒ = âˆšVar(X)</div>
+                        <p>
+                            Square root of variance indicating dispersion.
+                        </p>
+                    </div>
+                    <div class="formula-card">
+                        <h3>Binomial Distribution</h3>
+                        <div class="math">P(X=x)=nCxÂ·pxÂ·qn-x</div>
+                        <p>
+                            Probability of x successes in n independent trials.
+                        </p>
+                    </div>
+                    <div class="formula-card">
+                        <h3>Poisson Distribution</h3>
+                        <div class="math">P(X=x)=e-Î» Î»x / x!</div>
+                        <p>
+                            Used for rare event modeling.
+                        </p>
+                    </div>
+                    <div class="formula-card">
+                        <h3>Normal Distribution</h3>
+                        <div class="math">f(x)=1/Ïƒâˆš2Ï€ Â· e^(-(x-Î¼)Â²/2ÏƒÂ²)</div>
+                        <p>
+                            Continuous probability density function.
+                        </p>
+                    </div>
+                    <div class="formula-card">
+                        <h3>Covariance</h3>
+                        <div class="math">Cov(X,Y)=E(XY)-E(X)E(Y)</div>
+                        <p>
+                            Measures relationship between two variables.
+                        </p>
+                    </div>
+                    <div class="formula-card">
+                        <h3>Cumulative Distribution</h3>
+                        <div class="math">F(x)=P(Xâ‰¤x)</div>
+                        <p>
+                            Probability that random variable is less than or equal to x.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="apps">
+                <h2 class="section-title">Applications in Real World</h2>
+                <div class="app-grid">
+                    <div class="app">
+                        <h4>Artificial Intelligence</h4>
+                        <p>
+                            Probability distributions are used in Bayesian models,
+                            neural networks, and uncertainty prediction systems.
+                        </p>
+                    </div>
+                    <div class="app">
+                        <h4>Data Science</h4>
+                        <p>
+                            Used for data modeling, prediction, pattern recognition,
+                            and statistical inference.
+                        </p>
+                    </div>
+                    <div class="app">
+                        <h4>Communication Systems</h4>
+                        <p>
+                            Noise signals in communication channels often follow
+                            normal distribution.
+                        </p>
+                    </div>
+                    <div class="app">
+                        <h4>Quality Control</h4>
+                        <p>
+                            Manufacturing industries use distributions for defect
+                            analysis and reliability testing.
+                        </p>
+                    </div>
+                    <div class="app">
+                        <h4>Weather Prediction</h4>
+                        <p>
+                            Statistical distributions help estimate rainfall,
+                            temperature changes, and climate behavior.
+                        </p>
+                    </div>
+                    <div class="app">
+                        <h4>Finance</h4>
+                        <p>
+                            Used in stock market analysis, risk estimation,
+                            and investment prediction models.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="summary">
+                <h2>Chapter Summary</h2>
+                <p>
+                    This chapter helped me understand how uncertainty can be represented
+                    mathematically using random variables and probability distributions.
+                    I learned how distributions describe real-world events and how
+                    statistical parameters such as mean, variance, and covariance are
+                    calculated.
+
+                    The concepts learned in this chapter form the foundation for
+                    machine learning, artificial intelligence, predictive analytics,
+                    and modern engineering applications.
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">Chapter 3</footer>
+</div>
+</body>
+</html>
+
+</template>
+
+<template id='page-chapter4'>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chapter 4 - Statistical Inference</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#020305;
+    --line:#1a202a;
+    --text:#e9edf6;
+    --muted:#98a3b8;
+    --accent:#f1eb57;
+    --panel:#06080d;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:'IBM Plex Sans',sans-serif;
+    background:
+    radial-gradient(circle at 15% 20%, rgba(255,255,255,0.02) 0 2px, transparent 2px 100%),
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.02) 0 2px, transparent 2px 100%),
+    var(--bg);
+    background-size:34px 34px,34px 34px,auto;
+    color:var(--text);
+    overflow-x:hidden;
+}
+.wrap{
+    width:min(1860px,97vw);
+    margin:20px auto;
+    border:1px solid var(--line);
+    position:relative;
+}
+.wrap::before,.wrap::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    border-top:1px solid #0d1016;
+}
+.wrap::before{top:58px}
+.wrap::after{bottom:44px}
+.topbar{
+    height:58px;
+    border-bottom:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 26px;
+}
+.brand{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    font-weight:700;
+    color:#0b0c0f;
+    background:var(--accent);
+    padding:9px 14px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+}
+.label,.status{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--muted);
+}
+.main{padding:22px}
+.container{width:100%;max-width:1280px;margin:auto}
+.header{
+    border:1px solid var(--line);
+    background:linear-gradient(160deg,#d7d9df 0%,#caced6 35%,#b5b9c2 100%);
+    color:#1e2534;
+    padding:30px;
+    margin-bottom:22px;
+}
+.tag{
+    display:inline-block;
+    padding:8px 14px;
+    background:var(--accent);
+    color:#121622;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    margin-bottom:16px;
+}
+.header h1{font-size:clamp(2rem,4vw,3.1rem);margin-bottom:12px}
+.header p{max-width:1000px;color:#2e3648;line-height:1.9}
+.section-title{
+    text-align:left;
+    font-size:22px;
+    color:var(--accent);
+    margin:30px 0 16px;
+    font-family:'Space Mono',monospace;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+}
+.cards,.concept-grid,.formula-grid,.app-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:14px;
+}
+.card,.concept,.step,.formula-card,.app,.summary,.table-box{
+    background:var(--panel);
+    border:1px solid var(--line);
+}
+.card{padding:22px}
+.card h3{color:var(--accent);margin-bottom:10px;font-size:20px}
+.card p{color:#cbd5e1;line-height:1.8}
+.concepts,.process,.formula,.table-section,.apps{margin-top:24px}
+.concept{padding:22px}
+.concept h4{color:#dce4f6;margin-bottom:10px;font-size:20px}
+.concept p{color:#cbd5e1;line-height:1.8}
+.steps{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:14px;
+}
+.step{padding:20px;text-align:left}
+.step-number{
+    width:42px;height:42px;border-radius:50%;
+    background:var(--accent);color:#101522;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Space Mono',monospace;font-weight:700;margin-bottom:12px;
+}
+.step h3{margin-bottom:10px;color:#dce4f6}
+.step p{color:#cbd5e1;line-height:1.75}
+.formula{
+    padding:24px;
+}
+.formula h2{
+    text-align:left;
+    color:var(--accent);
+    margin-bottom:16px;
+    font-size:22px;
+    font-family:'Space Mono',monospace;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+}
+.formula-card{padding:18px;text-align:left}
+.formula-card h3{color:#dce4f6;margin-bottom:10px;font-size:20px}
+.math{font-size:20px;font-weight:600;margin-bottom:10px;color:var(--accent);line-height:1.7}
+.formula-card p{color:#cbd5e1;line-height:1.75}
+.table-box{overflow-x:auto;padding:14px}
+table{width:100%;border-collapse:collapse;min-width:800px}
+th,td{padding:14px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.08)}
+th{background:var(--accent);color:#0f172a;font-family:'Space Mono',monospace;font-size:12px;letter-spacing:0.06em;text-transform:uppercase}
+td{color:#cbd5e1}
+.app{padding:22px}
+.app h4{color:#dce4f6;margin-bottom:10px;font-size:20px}
+.app p{color:#cbd5e1;line-height:1.8}
+.summary{margin-top:24px;padding:24px;text-align:left}
+.summary h2{
+    color:var(--accent);
+    margin-bottom:16px;
+    font-size:22px;
+    font-family:'Space Mono',monospace;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+}
+.summary p{color:#cbd5e1;line-height:1.9}
+.footer{
+    height:44px;
+    border-top:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:#8691a6;
+}
+@media(max-width:768px){
+    .topbar{padding:0 14px}
+    .main{padding:14px}
+    .header{padding:20px}
+    .section-title,.formula h2,.summary h2{font-size:18px}
+    .status{display:none}
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+    <header class="topbar">
+        <div class="brand">Prob & Stats</div>
+        <div class="label">Chapter 4</div>
+        <div class="status">LOC: KLE TECH, INDIA</div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+
+            <div class="header">
+                <div class="tag">Chapter 4</div>
+                <h1>Statistical Inference</h1>
+                <p>
+                    In this chapter, I learned how statistical methods are used to draw
+                    conclusions about a population using sample data. Statistical inference
+                    plays a major role in data analysis, machine learning, scientific
+                    research, engineering decision-making, quality control, and prediction
+                    systems.
+
+                    This chapter introduced important concepts such as sampling techniques,
+                    hypothesis testing, confidence intervals, sample size determination,
+                    estimation theory, and testing of proportions and means. I also learned
+                    the importance of sampling in real-world applications where collecting
+                    data from an entire population is impractical or impossible.
+
+                    Through this chapter, I understood how uncertainty can be handled using
+                    statistical models and how data-driven conclusions are made scientifically.
+                </p>
+            </div>
+
+            <h2 class="section-title">Learning Outcomes</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Sampling Techniques</h3>
+                    <p>
+                        Learned various methods of sampling such as Simple Random Sampling,
+                        Stratified Sampling, Cluster Sampling, and sampling with and without
+                        replacement.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Hypothesis Testing</h3>
+                    <p>
+                        Understood null hypothesis, alternative hypothesis, significance level,
+                        Type I and Type II errors, and scientific decision-making using tests.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Confidence Intervals</h3>
+                    <p>
+                        Learned how confidence intervals estimate population parameters
+                        using sample statistics with reliability measures.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Statistical Decision Making</h3>
+                    <p>
+                        Applied inference methods to determine conclusions from uncertain
+                        or incomplete data.
+                    </p>
+                </div>
+            </div>
+
+            <div class="concepts">
+                <h2 class="section-title">Important Concepts Covered</h2>
+                <div class="concept-grid">
+                    <div class="concept"><h4>Population</h4><p>Complete collection of all observations or individuals under study.</p></div>
+                    <div class="concept"><h4>Sample</h4><p>A subset selected from the population to perform analysis and inference.</p></div>
+                    <div class="concept"><h4>Simple Random Sampling</h4><p>Every member of the population has equal probability of selection.</p></div>
+                    <div class="concept"><h4>Stratified Sampling</h4><p>Population is divided into groups called strata before sampling.</p></div>
+                    <div class="concept"><h4>Cluster Sampling</h4><p>Population is divided into clusters and entire clusters are selected.</p></div>
+                    <div class="concept"><h4>Null Hypothesis</h4><p>Assumes there is no significant difference or effect.</p></div>
+                    <div class="concept"><h4>Alternative Hypothesis</h4><p>Represents the claim opposite to the null hypothesis.</p></div>
+                    <div class="concept"><h4>P-Value</h4><p>Probability of obtaining results assuming null hypothesis is true.</p></div>
+                    <div class="concept"><h4>Confidence Interval</h4><p>Range of values likely to contain the population parameter.</p></div>
+                    <div class="concept"><h4>Level of Significance</h4><p>Probability threshold used to reject or accept hypotheses.</p></div>
+                </div>
+            </div>
+
+            <div class="process">
+                <h2 class="section-title">Steps in Hypothesis Testing</h2>
+                <div class="steps">
+                    <div class="step"><div class="step-number">1</div><h3>State Hypothesis</h3><p>Define null hypothesis (Hâ‚€) and alternative hypothesis (Hâ‚).</p></div>
+                    <div class="step"><div class="step-number">2</div><h3>Select Significance Level</h3><p>Choose Î± value such as 0.05 or 0.01.</p></div>
+                    <div class="step"><div class="step-number">3</div><h3>Compute Test Statistic</h3><p>Calculate z-test or t-test statistic using sample data.</p></div>
+                    <div class="step"><div class="step-number">4</div><h3>Decision Making</h3><p>Compare with critical value and conclude acceptance or rejection.</p></div>
+                </div>
+            </div>
+
+            <div class="formula">
+                <h2>Important Statistical Inference Formulas</h2>
+                <div class="formula-grid">
+                    <div class="formula-card"><h3>Sample Mean</h3><div class="math">xÌ„ = Î£x / n</div><p>Average value of sample observations.</p></div>
+                    <div class="formula-card"><h3>Standard Error</h3><div class="math">SE = Ïƒ / âˆšn</div><p>Measures variability of sample means.</p></div>
+                    <div class="formula-card"><h3>Z-Test Statistic</h3><div class="math">Z = (xÌ„ - Î¼) / (Ïƒ/âˆšn)</div><p>Used when population variance is known.</p></div>
+                    <div class="formula-card"><h3>T-Test Statistic</h3><div class="math">t = (xÌ„ - Î¼) / (s/âˆšn)</div><p>Used when population variance is unknown.</p></div>
+                    <div class="formula-card"><h3>Confidence Interval</h3><div class="math">xÌ„ Â± Z(Ïƒ/âˆšn)</div><p>Interval estimate for population mean.</p></div>
+                    <div class="formula-card"><h3>Sample Size</h3><div class="math">n = (ZÏƒ/E)Â²</div><p>Determines required sample size.</p></div>
+                    <div class="formula-card"><h3>Proportion Test</h3><div class="math">Z = (pÌ‚ - p)/âˆš[pq/n]</div><p>Used for hypothesis testing of proportions.</p></div>
+                    <div class="formula-card"><h3>Error Formula</h3><div class="math">Error = Estimate - True Value</div><p>Difference between estimated and actual value.</p></div>
+                </div>
+            </div>
+
+            <div class="table-section">
+                <h2 class="section-title">Comparison of Sampling Methods</h2>
+                <div class="table-box">
+                    <table>
+                        <tr>
+                            <th>Sampling Method</th>
+                            <th>Description</th>
+                            <th>Advantages</th>
+                            <th>Applications</th>
+                        </tr>
+                        <tr>
+                            <td>Simple Random Sampling</td>
+                            <td>Equal probability selection</td>
+                            <td>Easy and unbiased</td>
+                            <td>Surveys and research</td>
+                        </tr>
+                        <tr>
+                            <td>Stratified Sampling</td>
+                            <td>Population divided into strata</td>
+                            <td>Higher accuracy</td>
+                            <td>Population studies</td>
+                        </tr>
+                        <tr>
+                            <td>Cluster Sampling</td>
+                            <td>Entire clusters selected</td>
+                            <td>Cost effective</td>
+                            <td>Large geographical studies</td>
+                        </tr>
+                        <tr>
+                            <td>Systematic Sampling</td>
+                            <td>Select every kth element</td>
+                            <td>Simple implementation</td>
+                            <td>Industrial inspection</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="apps">
+                <h2 class="section-title">Real World Applications</h2>
+                <div class="app-grid">
+                    <div class="app"><h4>Medical Research</h4><p>Hypothesis testing is used to evaluate effectiveness of medicines and treatments.</p></div>
+                    <div class="app"><h4>Artificial Intelligence</h4><p>Machine learning models use statistical inference to make predictions from sample data.</p></div>
+                    <div class="app"><h4>Quality Control</h4><p>Industries use sampling and testing methods to monitor product quality.</p></div>
+                    <div class="app"><h4>Government Surveys</h4><p>Population surveys and census studies use statistical inference for national planning.</p></div>
+                    <div class="app"><h4>Finance</h4><p>Statistical inference helps estimate risks and investment performance.</p></div>
+                    <div class="app"><h4>Engineering Systems</h4><p>Reliability testing and performance evaluation rely heavily on statistical methods.</p></div>
+                </div>
+            </div>
+
+            <div class="summary">
+                <h2>Chapter Summary</h2>
+                <p>
+                    This chapter introduced me to the practical side of statistics where
+                    conclusions about large populations are drawn using limited sample data.
+                    I learned how inference techniques help in prediction, estimation, and
+                    scientific decision-making under uncertainty.
+
+                    Statistical inference forms the backbone of data science, machine learning,
+                    artificial intelligence, medical research, economics, engineering analysis,
+                    and quality management systems. Understanding hypothesis testing, confidence
+                    intervals, and sampling methods has provided me with analytical tools to
+                    evaluate data scientifically and make reliable conclusions.
+
+                    The knowledge gained from this chapter will be highly useful in future
+                    fields involving data analysis, predictive systems, and computational modeling.
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">Chapter 4</footer>
+</div>
+</body>
+</html>
+
+</template>
+
+<template id='page-mini-project'>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mini Project - AI Impact on Job Market</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#020305;
+    --line:#1a202a;
+    --text:#e9edf6;
+    --muted:#98a3b8;
+    --accent:#f1eb57;
+    --panel:#06080d;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+    font-family:'IBM Plex Sans',sans-serif;
+    background:
+    radial-gradient(circle at 15% 20%, rgba(255,255,255,0.02) 0 2px, transparent 2px 100%),
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.02) 0 2px, transparent 2px 100%),
+    var(--bg);
+    background-size:34px 34px,34px 34px,auto;
+    color:var(--text);
+    overflow-x:hidden;
+}
+.wrap{
+    width:min(1860px,97vw);
+    margin:20px auto;
+    border:1px solid var(--line);
+    position:relative;
+}
+.wrap::before,.wrap::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    border-top:1px solid #0d1016;
+}
+.wrap::before{top:58px}
+.wrap::after{bottom:44px}
+.topbar{
+    height:58px;
+    border-bottom:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 26px;
+}
+.brand{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    font-weight:700;
+    color:#0b0c0f;
+    background:var(--accent);
+    padding:9px 14px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+}
+.label,.status{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--muted);
+}
+.main{padding:22px}
+.container{width:100%;max-width:1300px;margin:auto}
+.hero{
+    border:1px solid var(--line);
+    background:linear-gradient(160deg,#d7d9df 0%,#caced6 35%,#b5b9c2 100%);
+    color:#1e2534;
+    padding:30px;
+}
+.tag{
+    display:inline-block;
+    padding:8px 14px;
+    background:var(--accent);
+    color:#121622;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    margin-bottom:16px;
+}
+.hero h1{font-size:clamp(2rem,4.5vw,3.6rem);margin-bottom:14px;line-height:1.1}
+.hero p{max-width:1100px;color:#2e3648;line-height:1.9}
+.section{margin-top:24px}
+.section-title{
+    text-align:left;
+    font-size:22px;
+    color:var(--accent);
+    margin-bottom:16px;
+    font-family:'Space Mono',monospace;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+}
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:14px;
+}
+.card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    padding:22px;
+}
+.card h3{color:var(--accent);margin-bottom:10px;font-size:20px}
+.card p{color:#cbd5e1;line-height:1.8}
+.member-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:14px;
+}
+.member{
+    background:var(--panel);
+    border:1px solid var(--line);
+    padding:22px;
+    text-align:left;
+}
+.member h3{color:#dce4f6;margin-bottom:10px;font-size:20px}
+.member p{color:#cbd5e1;line-height:1.8}
+.formula-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:14px;
+}
+.formula-card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    padding:20px;
+    text-align:left;
+}
+.formula-card h3{color:#dce4f6;margin-bottom:10px;font-size:20px}
+.math{font-size:20px;font-weight:600;margin-bottom:10px;line-height:1.7;color:var(--accent)}
+.conclusion{
+    background:var(--panel);
+    border:1px solid var(--line);
+    padding:24px;
+    text-align:left;
+}
+.conclusion h2{
+    color:var(--accent);
+    margin-bottom:16px;
+    font-size:22px;
+    font-family:'Space Mono',monospace;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+}
+.conclusion p{color:#cbd5e1;line-height:1.9}
+.btn{
+    display:inline-block;
+    margin-top:14px;
+    padding:10px 18px;
+    background:var(--accent);
+    color:#121622;
+    font-weight:700;
+    text-decoration:none;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+}
+.footer{
+    height:44px;
+    border-top:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:#8691a6;
+}
+@media(max-width:768px){
+    .topbar{padding:0 14px}
+    .main{padding:14px}
+    .hero{padding:20px}
+    .section-title,.conclusion h2{font-size:18px}
+    .status{display:none}
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+    <header class="topbar">
+        <div class="brand">Prob & Stats</div>
+        <div class="label">Mini Project</div>
+        <div class="status">LOC: KLE TECH, INDIA</div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+
+            <div class="hero">
+                <div class="tag">Probability & Statistics Mini Project</div>
+                <h1>AI Impact on Job Market</h1>
+                <p>
+                    This mini project focuses on analyzing the impact of Artificial Intelligence
+                    on employment, salaries, automation risk, remote work opportunities, and job stability
+                    using Probability and Statistics concepts.
+
+                    The project applies statistical techniques such as descriptive statistics,
+                    probability distributions, hypothesis testing, correlation analysis, regression analysis,
+                    and chi-square testing to study how AI is influencing the modern workforce.
+
+                    The analysis helps understand whether automation risk significantly affects employment,
+                    salary distribution, and job market trends across industries and locations.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Project Team Members</h2>
+                <div class="member-grid">
+                    <div class="member"><h3>Sahana Bellaki</h3><p>Roll No: 625<br>USN: 01FE25BCS348</p></div>
+                    <div class="member"><h3>Kartik Shivshetty</h3><p>Roll No: 632<br>USN: 01FE25BCS387</p></div>
+                    <div class="member"><h3>Shubhda Khanjire</h3><p>Roll No: 633<br>USN: 01FE25BCS388</p></div>
+                    <div class="member"><h3>Shraddha Mane</h3><p>Roll No: 640<br>USN: 01FE25BCS395</p></div>
+                    <div class="member"><h3>Padmachandra Kadabi</h3><p>Roll No: 641<br>USN: 01FE25BCS396</p></div>
+                    <div class="member"><h3>Akshay Kumar</h3><p>Roll No: 668<br>USN: 01FE25BCS422</p></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Project Report</h2>
+                <div class="card" style="text-align:left; max-width:800px; margin:auto;">
+                    <h3>AI Impact on Job Market Report</h3>
+                    <p>
+                        Click below to view the complete project report containing
+                        descriptive statistics, data visualization, probability analysis,
+                        hypothesis testing, regression analysis, and chi-square testing.
+                    </p>
+                    <a href="https://docs.google.com/document/d/1pEnFh6_4ZDsV7pbsMPuJ17aeMmEtRg9F7gv7bTBC0Qg/edit?usp=sharing" target="_blank" class="btn">View Full Project Report</a>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Objectives of the Project</h2>
+                <div class="grid">
+                    <div class="card"><h3>AI & Employment Analysis</h3><p>To analyze how Artificial Intelligence impacts employment opportunities, automation risk, and salary distribution in different industries.</p></div>
+                    <div class="card"><h3>Statistical Applications</h3><p>To apply concepts of Probability and Statistics on real-world AI and job market datasets.</p></div>
+                    <div class="card"><h3>Data Visualization</h3><p>To understand salary trends, automation exposure, and remote work patterns using histograms, boxplots, and Q-Q plots.</p></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Section 1 - Descriptive Statistics</h2>
+                <div class="grid">
+                    <div class="card"><h3>Measures of Central Tendency</h3><p>Mean, median, and mode were calculated for variables such as Median Salary, Automation Risk, and Remote Work Ratio.</p></div>
+                    <div class="card"><h3>Measures of Dispersion</h3><p>Standard deviation and spread analysis showed variability in salaries and automation risk across industries and job roles.</p></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Section 2 - Data Visualization</h2>
+                <div class="grid">
+                    <div class="card"><h3>Histogram Analysis</h3><p>Salary distribution was slightly right-skewed with few high salary outliers.</p></div>
+                    <div class="card"><h3>Boxplot Analysis</h3><p>Boxplots revealed extreme values and variability in salary and automation risk.</p></div>
+                    <div class="card"><h3>Q-Q Plot Analysis</h3><p>Q-Q plots showed deviations from normal distribution and presence of skewness.</p></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Section 3 - Probability</h2>
+                <div class="grid">
+                    <div class="card"><h3>Bayes Theorem</h3><p>Bayes theorem was applied to study relationship between high salary jobs and remote work opportunities.</p></div>
+                    <div class="card"><h3>Probability Distribution</h3><p>Salary distribution had mean value 90,119.97 USD with standard deviation 34,412.01 USD.</p></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Statistical Formulas Used</h2>
+                <div class="formula-grid">
+                    <div class="formula-card"><h3>Bayes Theorem</h3><div class="math">P(A|B)=P(Aâˆ©B)/P(B)</div></div>
+                    <div class="formula-card"><h3>Standard Deviation</h3><div class="math">Ïƒ = âˆš[Î£(x-Î¼)Â² / N]</div></div>
+                    <div class="formula-card"><h3>t-Test</h3><div class="math">t=(xÌ„-Î¼)/(s/âˆšn)</div></div>
+                    <div class="formula-card"><h3>Correlation Coefficient</h3><div class="math">r = Cov(X,Y)/(ÏƒxÏƒy)</div></div>
+                    <div class="formula-card"><h3>Linear Regression</h3><div class="math">y = Î²â‚€ + Î²â‚x</div></div>
+                    <div class="formula-card"><h3>Chi-Square Test</h3><div class="math">Ï‡Â² = Î£[(O-E)Â²/E]</div></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Section 4 - Hypothesis Testing</h2>
+                <div class="grid">
+                    <div class="card"><h3>One Sample t-Test</h3><p>Average salary was not significantly different from the hypothesized value.</p></div>
+                    <div class="card"><h3>Two Sample t-Test</h3><p>Salary comparison between USA and India showed no statistically significant difference.</p></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Section 5 - Correlation & Regression</h2>
+                <div class="grid">
+                    <div class="card"><h3>Correlation Analysis</h3><p>Most variables showed weak or no meaningful correlation with each other.</p></div>
+                    <div class="card"><h3>Regression Analysis</h3><p>Experience required showed almost no influence on salary prediction.</p></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Section 6 - Chi Square Test</h2>
+                <div class="grid">
+                    <div class="card"><h3>AI Impact vs Job Status</h3><p>AI Impact Level and Job Status were statistically independent.</p></div>
+                    <div class="card"><h3>AI Impact vs Salary Category</h3><p>AI impact level did not significantly influence high salary classification.</p></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="conclusion">
+                    <h2>Final Conclusion</h2>
+                    <p>
+                        The AI Impact on Job Market project successfully demonstrated
+                        the practical implementation of Probability and Statistics concepts
+                        using employment and AI datasets.
+
+                        The project explored salary distribution, automation risk,
+                        remote work opportunities, and employment status through statistical analysis.
+
+                        Results showed weak statistical relationships between AI impact level,
+                        salary category, and employment status, indicating that AI influence
+                        alone does not strongly determine employment outcomes in this dataset.
+
+                        This project improved understanding of statistical analysis,
+                        visualization techniques, probability concepts, hypothesis testing,
+                        and data-driven decision making.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">Mini Project</footer>
+</div>
+</body>
+</html>
+
+</template>
+
+<template id='page-lab-work'>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lab Work - Probability & Statistics</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#020305;
+    --line:#1a202a;
+    --text:#e9edf6;
+    --muted:#98a3b8;
+    --accent:#f1eb57;
+    --panel:#06080d;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:'IBM Plex Sans',sans-serif;
+    background:
+    radial-gradient(circle at 15% 20%, rgba(255,255,255,0.02) 0 2px, transparent 2px 100%),
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.02) 0 2px, transparent 2px 100%),
+    var(--bg);
+    background-size:34px 34px,34px 34px,auto;
+    color:var(--text);
+    overflow-x:hidden;
+}
+.wrap{
+    width:min(1860px,97vw);
+    margin:20px auto;
+    border:1px solid var(--line);
+    position:relative;
+}
+.wrap::before,.wrap::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    border-top:1px solid #0d1016;
+}
+.wrap::before{top:58px}
+.wrap::after{bottom:44px}
+.topbar{
+    height:58px;
+    border-bottom:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 26px;
+}
+.brand{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    font-weight:700;
+    color:#0b0c0f;
+    background:var(--accent);
+    padding:9px 14px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+}
+.label,.status{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--muted);
+}
+.main{padding:22px}
+.container{width:100%;max-width:1300px;margin:auto}
+.hero{
+    border:1px solid var(--line);
+    background:linear-gradient(160deg,#d7d9df 0%,#caced6 35%,#b5b9c2 100%);
+    color:#1e2534;
+    padding:30px;
+}
+.tag{
+    display:inline-block;
+    padding:8px 14px;
+    background:var(--accent);
+    color:#121622;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    margin-bottom:16px;
+}
+.hero h1{font-size:clamp(2rem,4.5vw,3.6rem);margin-bottom:14px}
+.hero p{max-width:1050px;color:#2e3648;line-height:1.9}
+.section{margin-top:24px}
+.section-title{
+    text-align:left;
+    color:var(--accent);
+    font-size:22px;
+    margin-bottom:16px;
+    font-family:'Space Mono',monospace;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+}
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:14px;
+}
+.card,.skill{
+    background:var(--panel);
+    border:1px solid var(--line);
+}
+.card{padding:22px}
+.card h3{
+    color:var(--accent);
+    margin-bottom:10px;
+    font-size:20px;
+}
+.card p{
+    color:#cbd5e1;
+    line-height:1.8;
+}
+.number{
+    width:42px;
+    height:42px;
+    background:var(--accent);
+    color:#0f172a;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:13px;
+    font-family:'Space Mono',monospace;
+    font-weight:700;
+    margin-bottom:12px;
+}
+.btn{
+    display:inline-block;
+    margin-top:14px;
+    padding:10px 16px;
+    background:var(--accent);
+    color:#0f172a;
+    text-decoration:none;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+}
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:14px;
+}
+.skill{
+    padding:20px;
+}
+.skill h4{
+    color:#dce4f6;
+    margin-bottom:10px;
+    font-size:20px;
+}
+.skill p{
+    color:#cbd5e1;
+    line-height:1.8;
+}
+.footer{
+    height:44px;
+    border-top:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:#8691a6;
+}
+@media(max-width:768px){
+    .topbar{padding:0 14px}
+    .main{padding:14px}
+    .hero{padding:20px}
+    .section-title{font-size:18px}
+    .status{display:none}
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+    <header class="topbar">
+        <div class="brand">Prob & Stats</div>
+        <div class="label">Lab Work</div>
+        <div class="status">LOC: KLE TECH, INDIA</div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+
+            <div class="hero">
+                <div class="tag">Probability & Statistics Laboratory</div>
+                <h1>Lab Work & Jupyter Notebook Experiments</h1>
+                <p>
+                    This section contains the practical laboratory experiments performed
+                    as part of the Probability and Statistics course using Python programming,
+                    Jupyter Notebook, and statistical analysis libraries.
+
+                    The experiments involved implementation of programming concepts,
+                    statistical computations, data visualization, probability distributions,
+                    hypothesis testing, and analytical methods using real datasets.
+
+                    Through these lab activities, practical understanding of statistical
+                    analysis and data interpretation techniques was developed using Python-based tools.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Laboratory Experiments</h2>
+                <div class="grid">
+                    <div class="card">
+                        <div class="number">01</div>
+                        <h3>Python Basics & Control Structures</h3>
+                        <p>
+                            This experiment focused on implementation of basic Python programming concepts
+                            including conditional statements, loops, lists, dictionaries, and pattern generation.
+
+                            Different examples involving if-else conditions, number checking, iterations,
+                            and nested loops were implemented to understand Python syntax and logical programming.
+                        </p>
+                        <a class="btn" href="https://drive.google.com/file/d/17OO-3Q7_FxDTEvsRMPZAG-kJbgpioBgq/view?usp=sharing" target="_blank">Open Notebook</a>
+                    </div>
+                    <div class="card">
+                        <div class="number">02</div>
+                        <h3>Statistical Analysis using E-Commerce Dataset</h3>
+                        <p>
+                            This experiment involved importing and analyzing an E-Commerce dataset
+                            using Python libraries such as Pandas, NumPy, Matplotlib, and Seaborn.
+
+                            Descriptive statistics including mean, shape, unique values, and distribution
+                            analysis were performed. Histogram plots and graphical visualization techniques
+                            were also implemented.
+                        </p>
+                        <a class="btn" href="https://drive.google.com/file/d/1bxEYpuoY4mdT6Okuz0NAsTvSXhLjY4cQ/view?usp=sharing" target="_blank">Open Notebook</a>
+                    </div>
+                    <div class="card">
+                        <div class="number">03</div>
+                        <h3>Probability Distribution & Binomial Analysis</h3>
+                        <p>
+                            This experiment focused on probability distributions using Python and SciPy library.
+
+                            Binomial Probability Mass Function (PMF) and Cumulative Distribution Function (CDF)
+                            were calculated and visualized graphically. Statistical probability analysis
+                            was performed using real dataset observations.
+                        </p>
+                        <a class="btn" href="https://drive.google.com/file/d/1f7hTaKfZZPXSIhE4CuJ4Cj5GeARZrrNq/view?usp=sharing" target="_blank">Open Notebook</a>
+                    </div>
+                    <div class="card">
+                        <div class="number">04</div>
+                        <h3>Python Data Structures & Tuple Operations</h3>
+                        <p>
+                            This experiment covered implementation of Python string functions,
+                            tuple operations, indexing, nested tuples, and sequence manipulation.
+
+                            Different examples were used to understand data storage, tuple access,
+                            nested data handling, and Python built-in operations.
+                        </p>
+                        <a class="btn" href="https://drive.google.com/file/d/1wdtHCz7L3fSW_DXzIy8EsMgD_Afeo7PT/view?usp=sharing" target="_blank">Open Notebook</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Tools & Technologies Used</h2>
+                <div class="skills">
+                    <div class="skill"><h4>Python</h4><p>Used for implementing statistical calculations and programming logic.</p></div>
+                    <div class="skill"><h4>Jupyter Notebook</h4><p>Used for interactive coding, visualization, and documentation.</p></div>
+                    <div class="skill"><h4>Pandas</h4><p>Used for data handling, manipulation, and dataset analysis.</p></div>
+                    <div class="skill"><h4>NumPy</h4><p>Used for numerical operations and statistical computation.</p></div>
+                    <div class="skill"><h4>Matplotlib</h4><p>Used for graphical representation and histogram plotting.</p></div>
+                    <div class="skill"><h4>Seaborn</h4><p>Used for advanced statistical visualization and plotting.</p></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Learning Outcomes</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Programming Knowledge</h3>
+                        <p>Learned implementation of statistical and logical concepts using Python programming.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Data Visualization</h3>
+                        <p>Understood graphical representation of datasets using plots and charts.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Statistical Analysis</h3>
+                        <p>Applied probability distributions and descriptive statistics on real datasets.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Practical Exposure</h3>
+                        <p>Gained practical understanding of Probability and Statistics concepts through coding and implementation.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">Lab Work</footer>
+</div>
+</body>
+</html>
+
+</template>
+
+<script>
+const viewer=document.getElementById('viewer');
+const buttons=Array.from(document.querySelectorAll('.tab-btn'));
+const homeBtn=document.getElementById('home-btn');
+function setActive(id){buttons.forEach(btn=>btn.classList.toggle('active',btn.dataset.page===id));}
+const finePointer = !window.matchMedia || window.matchMedia('(pointer:fine)').matches;
+let cursorChip = null;
+let tx = window.innerWidth / 2;
+let ty = window.innerHeight / 2;
+let lx = tx;
+let ly = ty;
+let cursorLoopStarted = false;
+let hoverActive = false;
+
+function setCursorHover(active){
+  hoverActive = !!active;
+  if(cursorChip){
+    cursorChip.style.width = hoverActive ? '18px' : '12px';
+    cursorChip.style.height = hoverActive ? '18px' : '12px';
+    cursorChip.style.opacity = hoverActive ? '1' : '0.88';
+    cursorChip.style.background = hoverActive ? 'rgba(98,245,216,0.18)' : 'rgba(98,245,216,0.08)';
+    cursorChip.style.borderColor = hoverActive ? 'rgba(98,245,216,1)' : 'rgba(98,245,216,0.9)';
+    cursorChip.style.boxShadow = hoverActive
+      ? '0 0 0 1px rgba(0,0,0,0.72), 0 0 0 2px rgba(255,255,255,0.62), 0 0 16px rgba(98,245,216,0.45)'
+      : '0 0 0 1px rgba(0,0,0,0.66), 0 0 0 2px rgba(255,255,255,0.55), 0 0 11px rgba(98,245,216,0.30)';
+  }
+}
+
+function updateCursorPosition(x,y,target=null){
+  tx = x;
+  ty = y;
+  if(target && target.closest){
+    setCursorHover(!!target.closest('a,button,[role=\"button\"],input,select,textarea,.tab-btn,.brand-btn'));
+  }
+}
+
+function startCursorLoop(){
+  if(cursorLoopStarted || !cursorChip){ return; }
+  cursorLoopStarted = true;
+  function tick(){
+    lx += (tx - lx) * 0.22;
+    ly += (ty - ly) * 0.22;
+    cursorChip.style.left = lx + 'px';
+    cursorChip.style.top = ly + 'px';
+    requestAnimationFrame(tick);
+  }
+  tick();
+}
+
+function setupGlobalCursor(){
+  if(!finePointer || cursorChip){ return; }
+  const style = document.createElement('style');
+  style.id = 'global-cursor-style';
+  style.textContent = `
+    html,body,*{cursor:none !important;}
+    .global-cursor-chip{
+      position:fixed;
+      left:0;
+      top:0;
+      transform:translate(-50%,-50%);
+      pointer-events:none;
+      z-index:2147483647;
+      width:12px;
+      height:12px;
+      border-radius:4px;
+      border:1.6px solid rgba(98,245,216,0.9);
+      background:rgba(98,245,216,0.08);
+      box-shadow:0 0 0 1px rgba(0,0,0,0.66), 0 0 0 2px rgba(255,255,255,0.55), 0 0 11px rgba(98,245,216,0.30);
+      opacity:.88;
+      transition:width .14s ease,height .14s ease,opacity .14s ease,border-color .14s ease,background .14s ease,box-shadow .14s ease;
+      will-change:left,top;
+    }
+  `;
+  document.head.appendChild(style);
+
+  cursorChip = document.createElement('div');
+  cursorChip.className = 'global-cursor-chip';
+  document.body.appendChild(cursorChip);
+
+  document.addEventListener('mousemove', (e) => {
+    updateCursorPosition(e.clientX, e.clientY, e.target);
+  }, {passive:true});
+  document.addEventListener('mouseleave', () => {
+    if(cursorChip){ cursorChip.style.opacity = '0.25'; }
+  }, {passive:true});
+  document.addEventListener('mouseenter', () => {
+    if(cursorChip){ cursorChip.style.opacity = hoverActive ? '1' : '0.88'; }
+  }, {passive:true});
+
+  startCursorLoop();
+}
+
+function applySimpleCursorToFrame(){
+  if(!finePointer){ return; }
+  const doc = viewer.contentDocument;
+  if(!doc || !doc.body){ return; }
+
+  const oldDot = doc.getElementById('cursorDot');
+  const oldRing = doc.getElementById('cursorRing');
+  if(oldDot) oldDot.remove();
+  if(oldRing) oldRing.remove();
+  doc.querySelectorAll('.cursor-dot,.cursor-ring,.p-cursor-dot,.p-cursor-ring,.global-cursor-dot,.global-cursor-ring,.global-cursor-line,.global-cursor-chip').forEach(el=>el.remove());
+
+  const prevStyle = doc.getElementById('frame-cursor-style');
+  if(prevStyle) prevStyle.remove();
+  const frameStyle = doc.createElement('style');
+  frameStyle.id = 'frame-cursor-style';
+  frameStyle.textContent = `
+    html,body,*{cursor:none !important;}
+    #cursorDot,#cursorRing,.cursor-dot,.cursor-ring,.p-cursor-dot,.p-cursor-ring{display:none !important;}
+    :is(.card,.concept,.app,.member,.skill,.formula-card,.step,.chart-box,.summary,.table-box){
+      transition:transform .24s ease,box-shadow .24s ease,border-color .24s ease,background-color .24s ease !important;
+      will-change:transform;
+    }
+    :is(.card,.concept,.app,.member,.skill,.formula-card,.step,.chart-box,.summary,.table-box):hover{
+      transform:translateY(-4px) !important;
+      border-color:rgba(241,235,87,0.38) !important;
+      box-shadow:0 10px 24px rgba(0,0,0,0.26), 0 0 0 1px rgba(241,235,87,0.10) inset !important;
+    }
+  `;
+  doc.head.appendChild(frameStyle);
+
+  doc.addEventListener('mousemove', (e) => {
+    const rect = viewer.getBoundingClientRect();
+    updateCursorPosition(rect.left + e.clientX, rect.top + e.clientY, e.target);
+  }, {passive:true});
+  doc.addEventListener('mouseleave', () => {
+    if(cursorChip){
+      cursorChip.style.opacity = '0.25';
+      setCursorHover(false);
+    }
+  }, {passive:true});
+  doc.addEventListener('mouseenter', () => {
+    if(cursorChip){ cursorChip.style.opacity = hoverActive ? '1' : '0.88'; }
+  }, {passive:true});
+}
+
+function loadPage(id){
+  const tpl=document.getElementById('page-'+id);
+  if(!tpl)return;
+  const doc = viewer.contentDocument || viewer.contentWindow.document;
+  doc.open();
+  doc.write(tpl.innerHTML);
+  doc.close();
+  setTimeout(applySimpleCursorToFrame,0);
+  setActive(id);
+}
+setupGlobalCursor();
+buttons.forEach(btn=>btn.addEventListener('click',()=>loadPage(btn.dataset.page)));
+if(homeBtn){homeBtn.addEventListener('click',()=>loadPage('introduction'));}
+loadPage('introduction');
+</script>
+</body>
+</html>
